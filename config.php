@@ -14,7 +14,6 @@ function cspt_plugin(){
 	
 	];
 	require ('post-types-alt.php');
-	require ('tax-type.php');
 }
 
 
