@@ -1,6 +1,7 @@
 <?php 
 /*
-Plugin Name: CSCT Creater
+Plugin Name: WP CSCT Creater
+>>>>>>> origin
 Plugin URI: https://github.com/mduran16/WP-CSPT-Creater
 Description: This plugin automatically generates content types for a WordPress blog
 Version: 0.2
