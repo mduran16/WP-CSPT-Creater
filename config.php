@@ -13,7 +13,8 @@ function cspt_plugin(){
 	$tax_options = [
 	
 	];
-	require ('post-types-alt.php');
+	require ('post-types.php');
+	require ('tax-types.php');
 }
 
 
