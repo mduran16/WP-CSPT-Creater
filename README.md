@@ -26,7 +26,7 @@ A feature that has had its objective achieved essentially means that a functioni
 A feature considered fully completed has been thoroughly reviewed as well as unit tested to be deemed as complete.
 
 ###Changelog
-V0.2 This initial release version contains functional custom post types as well as custom taxonomy however the fields lack any form of validation as well as certain fields existing but have yet to be implemented.
+**0.2:** This initial release version contains functional custom post types as well as custom taxonomy however the fields lack any form of validation as well as certain fields existing but have yet to be implemented.
 
 
 
