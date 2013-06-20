@@ -1,11 +1,11 @@
 <?php 
 /*
 Plugin Name: CSCT Creater
-Plugin URI: http://code-net.com/
+Plugin URI: https://github.com/mduran16/WP-CSPT-Creater
 Description: This plugin automatically generates content types for a WordPress blog
-Version: .5
+Version: 0.2
 Author: Matthew Duran
-Author URI: http://code-net.com
+Author URI: https://github.com/mduran16/
 License: GPL2
 */
 
