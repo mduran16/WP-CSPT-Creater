@@ -1,6 +1,7 @@
 <?php 
 /*
 Plugin Name: WP CSCT Creater
+>>>>>>> origin
 Plugin URI: https://github.com/mduran16/WP-CSPT-Creater
 Description: This plugin automatically generates content types for a WordPress blog
 Version: 0.2
@@ -13,7 +14,7 @@ function cspt_plugin(){
 	$tax_options = [
 	
 	];
-	require ('post-types.php');
+
 	require ('tax-types.php');
 }
 
