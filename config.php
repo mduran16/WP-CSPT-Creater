@@ -14,7 +14,7 @@ function cspt_plugin(){
 	$tax_options = [
 	
 	];
-
+	require ('post-types.php');
 	require ('tax-types.php');
 }
 
