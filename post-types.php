@@ -67,7 +67,7 @@ function cspt_init(){
 	//now we register it and put it on the menu
 	register_post_type('cspt', $args);
 	//possibly creating options as a global in scotland.php could prevent repetition
-	$options = [
+	$options = array(
 		"name", "singular_name", "menu_name", "all_items",
 		"add_new", "add_new_item", "edit_item", "new_item",
 		"view_item", "search_item", "not_found", "not_found_in_trash",
@@ -77,13 +77,13 @@ function cspt_init(){
 		"title", "editor", "author", "thumbnail", "excerpt",
 		"trackbacks", "custom_fields", "comments","revisions",
 		"page_attributes", "post_formats", "has_archive", "can_export"
-	];
+	);
 		
 	$query = new WP_Query(array('post_type' => array('cspt')));
     while ($query->have_posts()) : $query->the_post();
 		global $post;
 
-		$post_meta= [];
+		$post_meta= array();
 		
 		foreach($options as $option){
 			//if post meta = on then it was a checked checkbox
@@ -138,7 +138,7 @@ function cspt_init(){
 function cspt_update_post_type(){
 	global $post;
 	//All of our settings
-	$options = [
+	$options = array(
 		"name", "singular_name", "menu_name", "all_items",
 		"add_new", "add_new_item", "edit_item", "new_item",
 		"view_item", "search_item", "not_found", "not_found_in_trash",
@@ -148,7 +148,7 @@ function cspt_update_post_type(){
 		"title", "editor", "author", "thumbnail", "excerpt",
 		"trackbacks", "custom_fields", "comments","revisions",
 		"page_attributes", "post_formats", "has_archive", "can_export"
-	];
+	);
 	//if posted was set, then that means that a post type was either created or update
 	//gets inputs and updates meta accordingly.
 	if(isset($_POST['posted'])){
@@ -171,7 +171,7 @@ function cspt_update_post_type(){
 **/
 function main_setting_fields(){
 	global $post;
-	$options = [
+	$options = array(
 		"name", "singular_name", "menu_name", "all_items",
 		"add_new", "add_new_item", "edit_item", "new_item",
 		"view_item", "search_item", "not_found", "not_found_in_trash",
@@ -181,8 +181,8 @@ function main_setting_fields(){
 		"title", "editor", "author", "thumbnail", "excerpt",
 		"trackbacks", "custom_fields", "comments","revisions",
 		"page_attributes", "post_formats", "has_archive", "can_export"
-	];
-	$post_meta = [];
+	);
+	$post_meta = array();
 	//populate post meta array so we can prefill fields with any values they might need. 
 	//If I was to make a 2d array that had type as well as name I could probably do all the fields in a loop.
 	//#yolo
@@ -242,7 +242,7 @@ function main_setting_fields(){
 	</p>
 	<p>
 		<input type=checkbox name=title <?php if($post_meta['title'] == true) echo "checked"; ?>>Title<br/>
-		<input type=checkbox name=Editor <?php if($post_meta['Editor'] == true) echo "checked"; ?>>Editor<br/>
+		<input type=checkbox name=Editor <?php if($post_meta['editor'] == true) echo "checked"; ?>>Editor<br/>
 		<input type=checkbox name=author <?php if($post_meta['author'] == true) echo "checked"; ?>>Author<br/>
 		<input type=checkbox name=thumbnail <?php if($post_meta['thumbnail'] == true) echo "checked"; ?>>Thumbnail<br/>
 		<input type=checkbox name=excerpt <?php if($post_meta['excerpt'] == true) echo "checked"; ?>>Excerpt<br/>

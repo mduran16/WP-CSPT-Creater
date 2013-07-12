@@ -11,14 +11,9 @@ License: GPL2
 */
 
 function cspt_plugin(){
-	$tax_options = [
-	
-	];
 	require ('post-types.php');
 	require ('tax-types.php');
 }
-
-
 add_action('plugins_loaded', 'cspt_plugin');
 
 ?>

@@ -25,7 +25,7 @@ function cspt_tax_meta_boxes()
 function init_taxonomies()
 {
 	global $post;
-	$options = [
+	$options = array(
 	'taxonomy','object_type','name','singular_name','menu_name',
 	'all_items','edit_items','view_item','update_item','add_new_item',
 	'new_item_name','parent_item','parent_item_colon','search_items',
@@ -33,7 +33,7 @@ function init_taxonomies()
 	'choose_from_most_used','not_found','public','show_ui','show_in_nav_menus',
 	'show_tagcloud','show_admin_column','hierarchical','update_count_callback',
 	'rewrite','manage_terms','edit_terms','delete_terms','assign_terms','sort'
-	];
+	);
 
 	$labels = array(
         'name' => 'cspt_tax', 'taxonomy type general name',
@@ -72,7 +72,7 @@ function init_taxonomies()
     while ($query->have_posts()) : $query->the_post();
 		global $post;
 
-		$tax_meta= [];
+		$tax_meta= array();
 
 		foreach($options as $option){
 			if(get_post_meta($post->ID,$option,true) == 'on')
@@ -125,7 +125,7 @@ function cspt_update_tax()
 {
 	global $post;
 	//All of our settings
-	$options = [
+	$options = array(
 	'taxonomy','object_type','name','singular_name','menu_name',
 	'all_items','edit_items','view_item','update_item','add_new_item',
 	'new_item_name','parent_item','parent_item_colon','search_items',
@@ -133,7 +133,7 @@ function cspt_update_tax()
 	'choose_from_most_used','not_found','public','show_ui','show_in_nav_menus',
 	'show_tagcloud','show_admin_column','hierarchical','update_count_callback',
 	'rewrite','manage_terms','edit_terms','delete_terms','assign_terms','sort'
-	];
+	);
 	//if posted was set, then that means that a post type was either created or update
 	//gets inputs and updates meta accordingly.
 	if(isset($_POST['posted']))
@@ -156,7 +156,7 @@ function cspt_update_tax()
 function tax_main_settings_fields()
 {
 	global $post;
-	$options = [
+	$options = array(
 	'taxonomy','object_type','name','singular_name','menu_name',
 	'all_items','edit_items','view_item','update_item','add_new_item',
 	'new_item_name','parent_item','parent_item_colon','search_items',
@@ -164,8 +164,8 @@ function tax_main_settings_fields()
 	'choose_from_most_used','not_found','public','show_ui','show_in_nav_menus',
 	'show_tagcloud','show_admin_column','hierarchical','update_count_callback',
 	'rewrite','manage_terms','edit_terms','delete_terms','assign_terms','sort'
-	];
-	$tax_meta = [];
+	);
+	$tax_meta = array();
 	foreach($options as $option) $tax_meta[$option] = get_post_meta($post->ID,$option,true);
 
 	$post_types = get_post_types('','names');
@@ -188,8 +188,8 @@ function tax_main_settings_fields()
 	?>
 	</select>
 	<p></p>
-	<input name=name placeholder=Name value="<?php echo $tax_meta['name']  ?>"e><br/>
-	<input name=singluar_name placeholder='Singular Name' value="<?php echo $tax_meta['singluar_name']  ?>"><br/>
+	<input name=name placeholder=Name value="<?php echo $tax_meta['name']  ?>"><br/>
+	<input name=singluar_name placeholder='Singular Name' value="<?php echo $tax_meta['singular_name']  ?>"><br/>
 	<input name=menu_name placeholder='Menu Name' value="<?php echo $tax_meta['menu_name']  ?>"><br/>
 	<input name=all_items placeholder='All Items' value="<?php echo $tax_meta['all_items']  ?>"><br/>
 	<input name=edit_items placeholder="Edit Item" value="<?php echo $tax_meta['edit_items']  ?>"><br/>
