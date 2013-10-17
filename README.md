@@ -1,7 +1,7 @@
-WP-CSPT-Creater
+WP-CSPT-Creator
 ===============
 
-This is a WordPress plugin that automatically generates custom content. Custom Content includes/will include post types, taxonomies,post statuses, meta boxes, menus, shortcodes, and possibly a few others.
+This is a WordPress plugin that automatically generates custom content types. Custom Content includes/will include post types, taxonomies,post statuses, meta boxes, menus, shortcodes, and possibly a few others.
 
 ###Fully Completed:
 - None
